@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{     
+        padding: 10px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .btn{
+        padding: 0.5em;
+        background-color: pink;
+        border: 1px solid darkmagenta;
+        color: darkmagenta;
+        border-radius: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .box{
+        height: 100px;
+        width: 100px;
+        background-color: darksalmon;
+        display: block;
+    }
+</style>
+ <script>
+    function myfunc(a){
+        //return alert('Hello'+a);
+        document.getElementById("demo").innerHTML = "Hello "+a;
+        document.getElementById("box1").style.display = "none";
+
+    }
+ </script>
+</head>
+<body>
+    <a href="#" class="btn" onclick="myfunc('Peter')" >Button</a>
+
+   <br><br> 
+    <div id="demo"></div>
+    <br><br> 
+    <div class="box" id="box1"></div>
+
+    <div  id="pArray"></div>
+    
+    <script>
+            const person = ["Peter", "Paul", "Lisa", "Mary"];
+    // const person = [];
+    // person[0] = "Peter";
+    // person[1] = "Paul";
+    // person[2] = "Lisa";
+
+    // const person = new array("Peter", "Paul", "Lisa");
+
+    let pLength = person.length;
+    //alert(pLength);
+    let pList = "<ul>"
+
+        for (let i=0; i<pLength; i++ ){
+            pList +="<li>"+person[i]+"</li>";
+        }
+        pList +="</ul>";
+
+        document.getElementById("pArray").innerHTML = pList;
+    </script>
+</body>
+</html>
